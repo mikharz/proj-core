@@ -1,0 +1,16 @@
+{
+    "name": "proj/core",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Proj\\Core\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.4"
+        },
+        "sort-packages": true
+    },
+    "require": {}
+}
