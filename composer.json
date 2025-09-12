@@ -13,11 +13,16 @@
         "sort-packages": true
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.87",
         "phpstan/phpstan": "^2.1"
     },
     "scripts": {
         "analyse": [
+            "php-cs-fixer check --diff",
             "phpstan analyse --level 10 src/"
+        ],
+        "fix": [
+            "php-cs-fixer fix"
         ]
     }
 }
