@@ -14,5 +14,8 @@ return new PhpCsFixer\Config()
             '@PSR12:risky' => true,
             '@PHP82Migration:risky' => true,
             '@PHP84Migration' => true,
+            'trailing_comma_in_multiline' => [
+                'after_heredoc' => true,
+            ],
         ],
     );

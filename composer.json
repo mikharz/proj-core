@@ -12,6 +12,9 @@
         },
         "sort-packages": true
     },
+    "require": {
+        "sentry/sentry": "^4.15"
+    },
     "require-dev": {
         "deptrac/deptrac": "^4.2",
         "friendsofphp/php-cs-fixer": "^3.87",
