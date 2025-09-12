@@ -12,5 +12,12 @@
         },
         "sort-packages": true
     },
-    "require": {}
+    "require-dev": {
+        "phpstan/phpstan": "^2.1"
+    },
+    "scripts": {
+        "analyse": [
+            "phpstan analyse --level 10 src/"
+        ]
+    }
 }
