@@ -5,7 +5,7 @@ namespace Core\Application\UseCases;
 use Core\Application\UseCases\Middlewares\ExceptionMiddleware;
 
 /**
- * @extends UseCase<object>
+ * @extends UseCase<mixed>
  */
 abstract class Query extends UseCase
 {

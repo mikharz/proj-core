@@ -3,7 +3,8 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Core\\": "src/"
+            "Core\\": "src/",
+            "CoreTests\\": "tests/"
         }
     },
     "config": {
@@ -18,7 +19,8 @@
     "require-dev": {
         "deptrac/deptrac": "^4.2",
         "friendsofphp/php-cs-fixer": "^3.87",
-        "phpstan/phpstan": "^2.1"
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12"
     },
     "scripts": {
         "analyse": [
@@ -28,6 +30,9 @@
         ],
         "fix": [
             "php-cs-fixer fix"
+        ],
+        "tests": [
+            "phpunit tests"
         ]
     }
 }
