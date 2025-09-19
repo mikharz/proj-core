@@ -2,9 +2,9 @@
 
 namespace Core\Application\Contracts;
 
-interface ErrorHandlerInterface
+interface ClockInterface
 {
     public function bootstrap(): void;
 
-    public function captureException(\Throwable $exception): void;
+    public function now(): \DateTimeImmutable;
 }

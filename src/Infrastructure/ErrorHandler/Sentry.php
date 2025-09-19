@@ -6,7 +6,7 @@ use Core\Application\Contracts\ErrorHandlerInterface;
 
 class Sentry implements ErrorHandlerInterface
 {
-    public function register(): void
+    public function bootstrap(): void
     {
         \Sentry\init(
             [

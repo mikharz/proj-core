@@ -4,7 +4,7 @@ namespace Core\Infrastructure;
 
 use Core\Application\Contracts\ContainerInterface;
 use Core\Application\Contracts\ErrorHandlerInterface;
-use Core\Infrastructure\Contracts\ServiceProviderInterface;
+use Core\Application\Contracts\ServiceProviderInterface;
 use Core\Infrastructure\ErrorHandler\Sentry;
 
 class ServiceProvider implements ServiceProviderInterface

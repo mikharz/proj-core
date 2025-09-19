@@ -7,8 +7,6 @@ use Core\Application\Exceptions\UnresolvedDefinitionException;
 
 class Container implements ContainerInterface
 {
-    private static self $instance;
-
     /**
      * @var array<class-string, class-string>
      */
@@ -18,18 +16,6 @@ class Container implements ContainerInterface
      * @var array<class-string, object>
      */
     private array $objects = [];
-
-    public static function getInstance(): self
-    {
-        if (!isset(self::$instance)) {
-            self::$instance = new self();
-        }
-        return self::$instance;
-    }
-
-    private function __construct()
-    {
-    }
 
     public function get(string $abstract): object
     {
