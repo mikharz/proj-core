@@ -4,5 +4,8 @@ namespace Core\Application\Contracts;
 
 interface ServiceProviderInterface
 {
-    public function register(ContainerInterface $container): void;
+    public function bootstrap(
+        EnvironmentInterface $environment,
+        ContainerInterface $container,
+    ): void;
 }

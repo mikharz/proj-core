@@ -27,10 +27,11 @@ final class Instance
             $container,
         );
         foreach ($serviceProviders as $serviceProvider) {
-            $serviceProvider->register($container);
+            $serviceProvider->bootstrap(
+                $environment,
+                $container,
+            );
         }
-        $container->get(ClockInterface::class)->bootstrap();
-        $container->get(ErrorHandlerInterface::class)->bootstrap();
     }
 
     public static function environment(): EnvironmentInterface

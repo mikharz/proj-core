@@ -2,9 +2,7 @@
 
 namespace Core\Application\Contracts;
 
-interface ErrorHandlerInterface
+interface ErrorHandlerInterface extends BootableInterface
 {
-    public function bootstrap(): void;
-
     public function captureException(\Throwable $exception): void;
 }

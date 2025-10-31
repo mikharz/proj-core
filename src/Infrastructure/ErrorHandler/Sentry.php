@@ -2,17 +2,18 @@
 
 namespace Core\Infrastructure\ErrorHandler;
 
+use Core\Application\Contracts\EnvironmentInterface;
 use Core\Application\Contracts\ErrorHandlerInterface;
 
 class Sentry implements ErrorHandlerInterface
 {
-    public function bootstrap(): void
+    public static function boot(EnvironmentInterface $env): void
     {
         \Sentry\init(
             [
-                'dsn' => getenv('SENTRY_DSN') ?: null,
-                'environment' => getenv('ENVIRONMENT') ?: null,
-                'release' => getenv('VERSION') ?: null,
+                'dsn' => $env->get('SENTRY_DSN'),
+                'environment' => $env->string(),
+                'release' => $env->get('RELEASE'),
                 'send_default_pii' => true,
             ],
         );

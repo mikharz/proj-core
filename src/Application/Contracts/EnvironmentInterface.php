@@ -11,4 +11,6 @@ interface EnvironmentInterface
     public function isTest(): bool;
 
     public function get(string $variable): ?string;
+
+    public function string(): string;
 }

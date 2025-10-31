@@ -33,4 +33,9 @@ enum Environment: string implements EnvironmentInterface
         }
         return $value;
     }
+
+    public function string(): string
+    {
+        return $this->value;
+    }
 }

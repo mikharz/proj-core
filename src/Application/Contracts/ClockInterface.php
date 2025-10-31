@@ -2,9 +2,7 @@
 
 namespace Core\Application\Contracts;
 
-interface ClockInterface
+interface ClockInterface extends BootableInterface
 {
-    public function bootstrap(): void;
-
     public function now(): \DateTimeImmutable;
 }
